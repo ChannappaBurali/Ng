@@ -1,0 +1,50 @@
+<div class="container" style="padding-top:40px;">  
+  <div class="row">  
+    <div class="col-md-6 mx-auto">  
+      <div class="card mx-4">  
+        <div class="card-body p-4">  
+          <form [formGroup]="UserForm" (ngSubmit)="onFormSubmit(UserForm.value)">  
+            <h1 style="text-align:center">Register</h1>  
+          
+            <div class="input-group mb-3">  
+             
+              <input type="text" class="form-control" placeholder="FName"  formControlName="FName">  
+            </div>  
+            <div class="input-group mb-3">  
+              <input type="text" class="form-control" placeholder="LName"  formControlName="LName">  
+            </div> 
+            <div class="input-group mb-4">  
+              <input type="text" class="form-control" placeholder="Email"  formControlName="EMail">  
+            </div>
+            
+            <div class="input-group mb-4">  
+              <input type="text" class="form-control" placeholder="DOB"  formControlName="DOB">  
+            </div>
+
+            <div class="input-group mb-3">  
+              <input type="password" class="form-control" placeholder="Password"  formControlName="Password">  
+            </div>  
+              <div class="input-group mb-4">
+                <input type="radio" ng-model="Gender" value="Male">Male
+                <input type="radio" ng-model="Gender" value="Female">Female
+              </div>
+            <div class="input-group mb-4">  
+              <input type="text" class="form-control" placeholder="Contact No"  formControlName="Phone">  
+            </div> 
+                       
+
+            <div class="input-group mb-4">  
+              <input type="text" class="form-control" placeholder="Address"  formControlName="Address">  
+            </div>  
+            <button type="submit" class="btn btn-block btn-success">Add User</button> 
+            <div>  
+              <p style="color:#E92626;font-size:20px;font-weight:normal" Class="success" align="left">  
+                {{massage}}  
+              </p>  
+            </div> 
+          </form>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>  

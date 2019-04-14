@@ -1,0 +1,42 @@
+<div>  
+  <div class="row">  
+    <div class="col-sm-12 btn btn-primary">  
+        Welcome to DashBoard  
+    </div>  
+  </div>  
+  <div class="container" style="padding-top:40px;">  
+    <div class="row">  
+      <div class="col-md-10 mx-auto">  
+        <div class="card mx-4">  
+          <div class="card-body p-4">  
+         
+              <table class="table" >  
+                <tr ngclass="btn-primary">  
+                  <th class="tbl2">First Name</th>  
+                  <th class="tbl2">Last Name</th>  
+                  <th class="tbl2">Age</th>  
+                  <th class="tbl2">Email Id</th>  
+                  <th class="tbl2">Gender</th>  
+                  <th class="tbl2">Phone</th>                    
+                  <th class="tbl2">Edit</th>                     
+                </tr>  
+                <tr *ngFor="let employee of allEmployees | async">  
+                  <td class="tbl2">{{employee.FName}}</td>  
+                  <td class="tbl2">{{employee.LName}}</td> 
+                  <td class="tbl2">{{employee.DOB | date }}</td>  
+                  <td class="tbl2">{{employee.EMail}}</td>  
+                  <td class="tbl2">{{employee.Gender ==0? 'Male' : 'Female'}}</td>  
+                  <td class="tbl2">{{employee.Phone}}</td>                    
+                  <td class="tbl2">  
+                    <button type="button" class="btn btn-info"matTooltip="Click Edit Button"(click)="loadEmployeeToEdit(employee.UserPersonalId)">Edit</button>  
+                  </td>  
+                </tr>  
+        
+              </table>  
+        
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
